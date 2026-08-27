@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Password Strength Analyzer</h1>
+
+            <p class="description">
+                Check your password strength, security requirements,
+                and get suggestions for stronger passwords.
+            </p>
+
+            <!-- Password Input -->
+            <div class="input-group">
+
+                <label for="password">Enter Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="new-password"
+                    >
+
+                    <button type="button" id="togglePassword">
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Strength Meter -->
+            <div class="strength-section">
+
+                <div class="strength-header">
+
+                    <span>Password Strength</span>
+
+                    <span id="strengthText">
+                        No Password
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+                    <div id="strengthBar"></div>
+                </div>
+
+            </div>
+
+            <!-- Requirements -->
+            <div class="requirements">
+
+                <h2>Password Requirements</h2>
+
+                <div class="requirement" id="length">
+                    <span class="icon">✗</span>
+                    At least 8 characters
+                </div>
+
+                <div class="requirement" id="longLength">
+                    <span class="icon">✗</span>
+                    At least 12 characters
+                </div>
+
+                <div class="requirement" id="uppercase">
+                    <span class="icon">✗</span>
+                    Contains uppercase letter (A-Z)
+                </div>
+
+                <div class="requirement" id="lowercase">
+                    <span class="icon">✗</span>
+                    Contains lowercase letter (a-z)
+                </div>
+
+                <div class="requirement" id="number">
+                    <span class="icon">✗</span>
+                    Contains a number (0-9)
+                </div>
+
+                <div class="requirement" id="special">
+                    <span class="icon">✗</span>
+                    Contains special character (!@#$%^&*)
+                </div>
+
+                <div class="requirement" id="common">
+                    <span class="icon">✗</span>
+                    Does not use a common password
+                </div>
+
+            </div>
+
+            <!-- Feedback -->
+            <div class="feedback">
+
+                <h2>Security Analysis</h2>
+
+                <p id="feedbackText">
+                    Enter a password to see the security analysis.
+                </p>
+
+            </div>
+
+            <!-- Suggestions -->
+            <div class="suggestions">
+
+                <div class="suggestion-header">
+
+                    <h2>Stronger Password Suggestion</h2>
+
+                    <button id="generateBtn">
+                        Generate
+                    </button>
+
+                </div>
+
+                <div class="generated-password">
+
+                    <input
+                        type="text"
+                        id="generatedPassword"
+                        readonly
+                        placeholder="Generated password"
+                    >
+
+                    <button id="copyBtn">
+                        Copy
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Password Information -->
+            <div class="security-info">
+
+                <h2>Password Security Tips</h2>
+
+                <ul>
+                    <li>Use a password with at least 12 characters.</li>
+                    <li>Use uppercase and lowercase letters.</li>
+                    <li>Include numbers and special characters.</li>
+                    <li>Avoid names, birthdays, and common words.</li>
+                    <li>Do not reuse passwords on different websites.</li>
+                    <li>Use a password manager when possible.</li>
+                </ul>
+
+            </div>
+
+            <button id="clearBtn" class="clear-btn">
+                Clear Password
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
